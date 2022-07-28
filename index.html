@@ -43,6 +43,9 @@
         body{
             margin-top: 20%;
         }
+        input::-webkit-inner-spin-button{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -50,7 +53,7 @@
         <div id="principal">
             <h1>Número é primo?</h1>
             <input type="number" name="numero" id="numero" placeholder="Insira um número" onkeyup="Nprimo()">
-            <button onclick="Nprimo()">Clique aqui</button>
+           <!-- <button onclick="Nprimo()">Clique aqui</button>-->
             <script>
                 function Nprimo(){
                     contador = 0
