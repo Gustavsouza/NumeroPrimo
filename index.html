@@ -90,6 +90,17 @@
             }
             
             });
+
+
+            document.getElementById('Cnumero').addEventListener(
+                'paste', 
+                function(E){
+                    E.preventDefault();
+                    return false;
+                 },
+             true
+            );
+
             </script>
             <div id="div2">
                 <!-- Aqui aparecerá o resultado-->
