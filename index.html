@@ -58,7 +58,12 @@
                 function Nprimo(){
                     contador = 0
                     var numero = document.getElementById("numero").value;
-                      for(var i = 0; i < numero; i++){
+                    if(numero.length == 0){
+                      div2.innerHTML = 'Resultado'
+                    }else if(numero == 0 || numero == 1){
+                        div2.innerHTML = 'Número diferente de 0 ou 1'
+                    }else{
+                        for(var i = 0; i < numero; i++){
                             if(numero%i == 0){
                                 contador = contador +1
                             }
@@ -69,6 +74,7 @@
                         }else{
                             div2.innerHTML = 'Não é primo'
                         }
+                    }
         }
             </script>
             <div id="div2">
