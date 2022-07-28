@@ -59,9 +59,9 @@
                     contador = 0
                     var numero = document.getElementById("numero").value;
                     if(numero.length == 0){
-                      div2.innerHTML = 'Resultado'
+                      div2.innerHTML = '<p style="color:black;font-weight: 600;" >Resultado</p>'
                     }else if(numero == 0 || numero == 1){
-                        div2.innerHTML = 'Número diferente de 0 ou 1'
+                        div2.innerHTML = '<p style="color:red;font-weight: 800;">Número diferente de 0 ou 1</p>'
                     }else{
                         for(var i = 0; i < numero; i++){
                             if(numero%i == 0){
@@ -70,16 +70,16 @@
                         }
                         if(contador <= 2){
                            //var texto = document.getElementById('div2')
-                           div2.innerHTML = 'É primo'
+                           div2.innerHTML = '<p style="color:green;font-weight: 600;" >É primo</p>'
                         }else{
-                            div2.innerHTML = 'Não é primo'
+                            div2.innerHTML = '<p style="color:red;font-weight: 600;" >Não é primo</p>'
                         }
                     }
         }
             </script>
             <div id="div2">
                 <!-- Aqui aparecerá o resultado-->
-                <p>resultado</p>
+                <p style="color:black;font-weight: 600;">Resultado</p>
             </div>
         </div>
     </section>
