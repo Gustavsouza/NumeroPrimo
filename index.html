@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NumeroPrimo?</title>
     <style>
-        div#principal,#div2{
+        div#principal{
             margin:auto;
             width: auto;
             box-shadow: 5px 5px 10px rgba(250, 6, 6, 0.034);
@@ -15,7 +15,7 @@
             padding-top: 10px;
             transition-duration: 1s;
         }
-        div#principal:hover{
+        section#tela:hover{
             margin:auto;
             width: auto;
             box-shadow: 5px 5px 10px rgba(250, 6, 6, 0.034);
@@ -25,34 +25,48 @@
             background-color: rgba(0, 255, 255, 0.37);
             transition-duration: 1.5s;
         }
+        section#tela{
+            max-width: 20%;
+            margin: auto;
+            width: auto;
+            box-shadow: 0px 0.6px 8px rgba(6, 234, 250, 0.342);
+        }
+        div#div2{
+            padding-top: 10px;
+        }
+        body{
+            margin-top: 20%;
+        }
     </style>
 </head>
 <body>
-    <div id="principal">
-        <h1>Número é primo?</h1>
-        <input type="number" name="numero" id="numero" placeholder="Insira um número" onkeyup="Nprimo()">
-        <button onclick="Nprimo()">Clique aqui</button>
-        <script>
-            function Nprimo(){
-                contador = 0
-                var numero = document.getElementById("numero").value;
-                  for(var i = 0; i < numero; i++){
-                        if(numero%i == 0){
-                            contador = contador +1
-                        }  
-                    }   
-                    if(contador <= 2){
-                       //var texto = document.getElementById('div2')
-                       div2.innerHTML = 'É primo'
-                    }else{
-                        div2.innerHTML = 'Não é primo'
-                    }
-
-    }
-        </script>
-    </div>
-    <div id="div2">
-
-    </div>
+    <section id="tela">
+        <div id="principal">
+            <h1>Número é primo?</h1>
+            <input type="number" name="numero" id="numero" placeholder="Insira um número" onkeyup="Nprimo()">
+            <button onclick="Nprimo()">Clique aqui</button>
+            <script>
+                function Nprimo(){
+                    contador = 0
+                    var numero = document.getElementById("numero").value;
+                      for(var i = 0; i < numero; i++){
+                            if(numero%i == 0){
+                                contador = contador +1
+                            }
+                        }
+                        if(contador <= 2){
+                           //var texto = document.getElementById('div2')
+                           div2.innerHTML = 'É primo'
+                        }else{
+                            div2.innerHTML = 'Não é primo'
+                        }
+        }
+            </script>
+            <div id="div2">
+                <!-- Aqui aparecerá o resultado-->
+                <p>resultado</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
